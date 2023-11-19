@@ -1,0 +1,23 @@
+{% extends 'online_store.html' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Ассортимент обуви:</h1>
+    <table>
+        <tr>
+            <th>Модель</th>
+            <th>Рацветка</th>
+            <th>Размер</th>
+            <th>Цена</th>
+        </tr>
+        {% for shoe in shoes %}
+        <tr>
+            <td>{{ shoe['model'] }}</td>
+            <td>{{ shoe['color'] }}</td>
+            <td>{{ shoe['size'] }}</td>
+            <td>{{ shoe['price'] }}</td>
+        </tr>
+        {% endfor %}
+{% endblock %}

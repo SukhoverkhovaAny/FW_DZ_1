@@ -1,0 +1,22 @@
+{% extends 'online_store.html' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Украшения:</h1>
+    <table>
+        <tr>
+            <th>Модель</th>
+            <th>Рацветка</th>
+            <th>Размер</th>
+            <th>Цена</th>
+        </tr>
+        {% for access in accessories %}
+        <tr>
+            <td>{{ access['model'] }}</td>
+            <td>{{ access['material'] }}</td>
+            <td>{{ access['price'] }}</td>
+        </tr>
+        {% endfor %}
+{% endblock %}
